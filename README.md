@@ -7,4 +7,7 @@ Deze repository bevat files om bodemgegevens afkomstig uit het DINOLoket van TNO
   - Dit script leest de xy- coordinaten en vormt ze om tot RD-new coordinaten. Werkt alleen binnen de directory waar de GEF-files aanwezig      zijn
 - Son_KD_litho_9.2_Chron.py
   - Dit script leest (vrijwel) elke .gef file en vomt ze om tot een bodeminterpretatie op basis van:
-    - De k-waarde 
+    - De k-waarde volgens het algoritme beschreven in www.RVDE.nl, deze is opgenomen in de meest linkse kolom in [m/dag]. De verschillende kleuren geven aan of voor de matrix meer dan 1,5,10 of 20 [m/dag] is berekend.
+    - De middelste kolom (T) geeft het bodemtype weer zoals deze is bepaald aan de hand van de bodemtype-classificatie in www.rvde.nl. Opgemerkt wordt dat dit een benadering is, maar waar deze indeling wordt vergelken met goed beschreven, nabij gelegen boringen, de overeenkomsten groot zijn. De kleurkeuze kan vanzelfsprkend in het script worden aangepast. Uiteindelijk blijkt een goede kleurkeuze een van de meest uitdagende aspecten van coderen te zijn.
+    - De kolom met de KD- en c-waarden zoals Python deze berekend aan de hand van de k-waarde. Hierbij zijn watervoerende lagen dunner dan 2 meter en waterremmende lagen dunner dan 0,4 meter weggelaten om de figuren overzichtelijk te houden.
+   Kern van dit script is overgenomen uit een door Rob van Putten gepubliceerd script om GEF-files te lezen.
